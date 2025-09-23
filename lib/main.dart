@@ -15,7 +15,9 @@ class NotesApp extends StatelessWidget {
       theme: ThemeData(
         brightness: Brightness.dark,
       ),
-      routes: {NotesView.id: (context) => NotesView()},
+      routes: {
+        NotesView.id: (context) => NotesView(),
+      },
       initialRoute: NotesView.id,
     );
   }
