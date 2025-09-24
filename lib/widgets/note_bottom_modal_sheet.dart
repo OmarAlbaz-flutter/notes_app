@@ -1,10 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/widgets/custom_text_form_field.dart';
 
 class AddNoteBottomSheet extends StatelessWidget {
   const AddNoteBottomSheet({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Column(
+        children: [
+          CustomTextFormField(
+            hintText: "Text",
+          ),
+          SizedBox(
+            height: 10,
+          ),
+        ],
+      ),
+    );
   }
 }
