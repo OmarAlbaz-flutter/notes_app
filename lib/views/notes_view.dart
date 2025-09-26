@@ -13,7 +13,7 @@ class NotesView extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           showModalBottomSheet(
-            
+            isScrollControlled: true,
             enableDrag: true,
             showDragHandle: true,
             context: context,
