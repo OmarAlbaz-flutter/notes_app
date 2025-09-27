@@ -3,7 +3,7 @@ import 'package:notes_app/constants.dart';
 
 class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField({
-    // this.onChanged,
+    this.onChanged,
     // this.validator,
     this.obscureText,
     this.onSaved,
@@ -14,7 +14,7 @@ class CustomTextFormField extends StatelessWidget {
   });
   final String hintText;
   final void Function(String?)? onSaved;
-  // final void Function(String)? onChanged;
+  final void Function(String)? onChanged;
   final bool? obscureText;
   // final String? Function(String?)? validator;
   final TextEditingController? controller;
@@ -31,7 +31,7 @@ class CustomTextFormField extends StatelessWidget {
           return null;
         }
       },
-      // onChanged: onChanged,
+      onChanged: onChanged,
       onSaved: onSaved,
       obscureText: obscureText ?? false,
       cursorColor: kPrimaryColor,
