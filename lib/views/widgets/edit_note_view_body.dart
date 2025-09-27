@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:notes_app/cubits/notes_cubit/notes_cubit_cubit.dart';
 import 'package:notes_app/models/note_model.dart';
+import 'package:notes_app/views/widgets/color_edit_listview.dart';
 import 'package:notes_app/views/widgets/custom_app_bar.dart';
 import 'package:notes_app/views/widgets/custom_text_form_field.dart';
 
@@ -62,6 +63,12 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
             },
             hintText: widget.noteModel.subTitle,
             maxLines: 5,
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          EditNoteColorsList(
+            noteModel: widget.noteModel,
           ),
         ],
       ),
